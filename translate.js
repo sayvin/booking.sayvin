@@ -1,3 +1,5 @@
+//I'm not very happy for this. This script is very villa, but working.
+
 var ln = x=window.navigator.language||navigator.browserLanguage;
 var ln = ln.substring(0,2);
 var lang = window.location.search;
@@ -15,12 +17,21 @@ if(!lang.includes(en) && !lang.includes(es))
 
 function FormatUrl(url){
 		var urlFinal;
-		
-		if(lang == "")
-		{
-			location.replace(url+"?"+en); 
-		}else {
-			location.replace(url+"&"+en); 
+		var sayvin = "sayvin.com";
+		var onlineTravel = "onlineTravel"
+
+		//For domain sayvin
+		if(url.includes(sayvin)){
+			if(lang == "")
+			{
+				urlFinal = url+"?"+en; 	
+			}
+		}
+
+		//For domain onlineTravel
+		if(url.includes(onlineTravel)) {
+			//var urlPivot = removeSign(url);
+			urlFinal = urlPivot+"&"+en; 
 		}
 
 		return urlFinal
