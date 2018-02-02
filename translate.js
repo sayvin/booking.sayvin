@@ -37,9 +37,9 @@ function TranslateWeb(url){
 
 	//For domain onlineTravel
 	if(url.includes(onlineTravel)) {
-		//var urlPivot = removeChar(url);
-		//urlFinal = urlPivot+"&"+en; 
-		urlFinal = url+"&"+en; 
+		var urlPivot = removeChar(url);
+		urlFinal = urlPivot+"&"+en; 
+		//urlFinal = url+"&"+en; 
 		redirect = true;
 	}
 
